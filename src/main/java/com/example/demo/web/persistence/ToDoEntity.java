@@ -13,8 +13,7 @@ public class ToDoEntity {
     private String what;
 
 
-    public ToDoEntity(Long id, String what) {
-        this.id = id;
+    public ToDoEntity(String what) {
         this.what = what;
     }
 
