@@ -3,13 +3,12 @@ package com.example.demo.web.api;
     public class ToDo {
 
         private long id;
-        private String todo;
-        private boolean done;
+        private String what;
 
-        public ToDo(long id, String todo, boolean done) {
+
+        public ToDo(long id, String what) {
             this.id = id;
-            this.todo = todo;
-            this.done = done;
+            this.what = what;
         }
 
         public long getId() {
@@ -20,19 +19,13 @@ package com.example.demo.web.api;
             this.id = id;
         }
 
-        public String getTodo() {
-            return todo;
+        public String getWhat() {
+            return what;
         }
 
-        public void setTodo(String todo) {
-            this.todo = todo;
+        public void setWhat(String what) {
+            this.what = what;
         }
 
-        public boolean isDone() {
-            return done;
-        }
 
-        public void setDone(boolean done) {
-            this.done = done;
-        }
     }

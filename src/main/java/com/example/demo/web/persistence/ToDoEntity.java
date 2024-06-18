@@ -9,15 +9,13 @@ public class ToDoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    @Column(name = "to_do", nullable = false)
-    private String todo;
-    @Column(name = "done")
-    private Boolean done;
+    @Column(name = "what", nullable = false)
+    private String what;
 
-    public ToDoEntity(Long id, String todo, Boolean done) {
+
+    public ToDoEntity(Long id, String what) {
         this.id = id;
-        this.todo = todo;
-        this.done = done;
+        this.what = what;
     }
 
     protected ToDoEntity() {}
@@ -26,21 +24,17 @@ public class ToDoEntity {
         return id;
     }
 
-    public String getTodo() {
-        return todo;
+    public String getWhat() {
+        return what;
     }
 
-    public void setTodo(String todo) {
-        this.todo = todo;
+    public void setWhat(String what) {
+        this.what = what;
     }
 
-    public Boolean isDone() {
-        return done;
-    }
 
-    public void setDone(Boolean done) {
-        this.done = done;
-    }
+
+
 }
 
 
