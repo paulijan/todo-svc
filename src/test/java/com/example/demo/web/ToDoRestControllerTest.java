@@ -95,7 +95,6 @@ public class ToDoRestControllerTest {
     @Test
     void deleteToDo() throws Exception {
         when(toDoService.deleteById(anyLong())).thenReturn(true);
-
         mockMvc.perform(delete("/api/v1/todos/{id}", 1L))
                 .andExpect(status().isOk());
     }
