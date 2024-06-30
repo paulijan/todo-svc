@@ -39,7 +39,6 @@ public class ToDoRestController {
         URI uri = new URI("/api/v1/todos/" + toDo.getId());  //"Adresse" der neu erzeugten Ressource
         return ResponseEntity.created(uri).build();
     }
-
     @CrossOrigin
     @PutMapping(path = "/api/v1/todos/{id}") //Update
     public ResponseEntity<ToDo> updateToDo(@PathVariable Long id, @RequestBody ToDoManipulationRequest request) { //Aktualisiert zurück

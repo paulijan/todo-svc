@@ -9,4 +9,9 @@ import java.util.List;
 public interface ToDoRepository extends JpaRepository<ToDoEntity, Long> {
 
     List<ToDoEntity> findAllByWhat(String what);
+
+    List<ToDoEntity> findAllByCompleted(boolean completed);
+
+    List<ToDoEntity> findByWhatContaining(String keyword);
+
 }

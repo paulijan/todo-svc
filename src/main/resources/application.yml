@@ -9,12 +9,9 @@ spring:
   jpa:
     properties:
       hibernate:
-        # The SQL dialect makes Hibernate generate better SQL for the chosen database
-        dialect: org.hibernate.dialect.PostgreSQLDialect
         jdbc:
           time_zone: UTC
     show-sql: false # Set true for debugging
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update # (create, create-drop, validate, update)
     open-in-view: false
@@ -22,3 +19,6 @@ spring:
     init:
       platform: postgres
       mode: always
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
